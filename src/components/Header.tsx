@@ -1,0 +1,5 @@
+"use client";
+import Link from "next/link";
+import {useState} from "react";
+const links=[["Home","/"],["About","/about"],["Services","/services"],["Projects","/projects"],["Contact","/contact"]];
+export default function Header(){const[open,setOpen]=useState(false);return <header className="site-header"><div className="wrap header-inner"><Link href="/" className="brand" aria-label="Suma Sri Interiors home"><span className="brand-mark">SS</span><span className="brand-copy"><b>SUMA SRI</b><small>INTERIORS & CONSTRUCTIONS</small></span></Link><button className="menu-toggle" aria-label="Toggle navigation" aria-expanded={open} onClick={()=>setOpen(!open)}>{open?"✕":"☰"}</button><nav className={open?"nav nav-open":"nav"} aria-label="Main navigation">{links.map(([label,href])=><Link key={href} href={href} onClick={()=>setOpen(false)}>{label}</Link>)}<Link className="nav-cta" href="/contact" onClick={()=>setOpen(false)}>Book a consultation ↗</Link></nav></div></header>}
