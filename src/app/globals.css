@@ -16,3 +16,5 @@ body:has(.admin-shell) .site-header,body:has(.admin-shell) .footer,body:has(.adm
 @media(max-width:390px){.admin-main{padding-inline:12px}.admin-topbar h1{font-size:21px}.admin-ghost{padding:9px}.admin-ghost span{display:none}.stats-grid article span{font-size:9px}.stats-grid article small{font-size:8px}.panel-heading h2{font-size:20px}}
 
 .brand-mark-image{display:block;width:48px;height:48px;flex:0 0 48px;object-fit:contain;border-radius:10px}.brand{gap:13px}.brand-copy b{letter-spacing:.16em}
+
+.brand-logo-only{display:flex;align-items:center;flex:0 0 auto}.brand-main-logo{display:block;width:clamp(230px,25vw,320px);height:auto;max-height:68px;object-fit:contain;object-position:left center}.brand-logo-only{gap:0}@media(max-width:760px){.brand-main-logo{width:230px;max-height:58px}}
