@@ -1,29 +1,26 @@
 # Suma Sri Interiors & Constructions
 
-Premium, responsive Next.js website for Suma Sri Interiors & Constructions, Hanamakonda, Warangal.
+Premium responsive website for Suma Sri Interiors & Constructions, Hanamakonda, Warangal.
 
 ## Stack
-- Next.js App Router + TypeScript
-- Responsive editorial design system
-- SEO metadata, JSON-LD, sitemap and robots
-- Lead enquiry form with WhatsApp handoff
+Next.js 15 App Router, React 19, TypeScript, responsive CSS, SEO metadata, LocalBusiness JSON-LD, sitemap, robots, image optimization and WhatsApp lead handoff.
 
 ## Run locally
 ```bash
 npm install
 cp .env.example .env.local
-# Set NEXT_PUBLIC_WHATSAPP_NUMBER to the official number (digits only, including country code)
+# Add the official WhatsApp number in international digits-only format (91 followed by the number)
 npm run dev
 ```
 
-## Before launch
-- Add the official WhatsApp/phone number and confirm the address.
-- Replace illustrative stock photos with the original Suma Sri project photos. The source Vercel deployment could not be fetched from this environment, so its private/original media assets could not be copied.
-- Confirm every service description and portfolio detail with the business owner.
-- Add Google Search Console and analytics IDs only when supplied by the owner.
-- Test the enquiry handoff and run Lighthouse after deployment.
+## Source-content and asset note
+The existing Vercel website was used as the source for known business name, Hanamakonda/Warangal address, service area, service categories, consultation process, estimate/material-choice information and the described Hanamakonda project details. Its original media assets could not be fetched in this environment. Images in this repository are illustrative Unsplash references, not copied original company photography. Replace them with owner-approved original photos before launch.
 
-## Verified content carried over
-Brand name, Warangal/Hanamakonda location, Telangana and Andhra Pradesh service area, construction/design/renovation/interiors services, and the described Hanamakonda home features: carved hall arch, modular kitchen, backlit pooja panel, TV unit and wall panelling, bedroom wardrobe and wash counter.
+## Confirm before launch
+- Official WhatsApp/phone number and email.
+- Owner-approved photos, testimonials, language translations and project claims.
+- Confirm current business address and hours.
+- Configure NEXT_PUBLIC_WHATSAPP_NUMBER and NEXT_PUBLIC_SITE_URL.
+- Test enquiry handoff on mobile and run Lighthouse after deployment.
 
-Portfolio images included in this repository are labelled as illustrative until replaced with owner-approved project photography.
+No phone number, email address or testimonial has been invented. The contact form hands off to WhatsApp only after the official number is configured.
