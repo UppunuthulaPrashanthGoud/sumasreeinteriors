@@ -1085,3 +1085,8 @@ a,button{ -webkit-tap-highlight-color:transparent}
  .page-hero{min-height:320px;background-position:58% center!important}
  .page-hero .wrap{width:calc(100% - 40px)}
 }
+
+/* New supplied Suma Sri logo lockup */
+.brand-main-logo{width:218px!important;height:78px!important;max-height:78px;object-fit:contain;object-position:left center;background:#333522;border-radius:2px;padding:2px}
+.chosen-footer-brand img{width:210px;height:112px;object-fit:contain;object-position:left center;background:#333522;border-radius:2px;padding:2px}
+@media(max-width:700px){.brand-main-logo{width:174px!important;height:62px!important;max-height:62px}.chosen-footer-brand img{width:190px;height:102px}}
