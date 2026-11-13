@@ -1090,3 +1090,7 @@ a,button{ -webkit-tap-highlight-color:transparent}
 .brand-main-logo{width:218px!important;height:78px!important;max-height:78px;object-fit:contain;object-position:left center;background:#333522;border-radius:2px;padding:2px}
 .chosen-footer-brand img{width:210px;height:112px;object-fit:contain;object-position:left center;background:#333522;border-radius:2px;padding:2px}
 @media(max-width:700px){.brand-main-logo{width:174px!important;height:62px!important;max-height:62px}.chosen-footer-brand img{width:190px;height:102px}}
+
+/* Render the brand PNG directly; bypass Next image optimization for this transparent logo. */
+.brand-main-logo{display:block;width:218px;height:auto;max-height:58px;object-fit:contain}
+.footer-logo{display:block;width:min(280px,100%);height:auto;object-fit:contain}
