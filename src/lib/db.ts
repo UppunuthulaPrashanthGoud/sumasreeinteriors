@@ -1,0 +1,6 @@
+import {createClient,type Client} from "@libsql/client";
+import {mkdir} from "node:fs/promises";
+import path from "node:path";
+let client:Client|undefined, ready:Promise<void>|undefined;
+export function db(){if(!client){const url=process.env.TURSO_DATABASE_URL||"file:./data/leads.db";if(url.startsWith("file:"))void mkdir(path.resolve(process.cwd(),"data"),{recursive:true});client=createClient({url,authToken:process.env.TURSO_AUTH_TOKEN||undefined});}return client;}
+export async function ensureDb(){if(!ready)ready=(async()=>{await db().execute("CREATE TABLE IF NOT EXISTS leads (id TEXT PRIMARY KEY,created_at TEXT NOT NULL,name TEXT NOT NULL,phone TEXT NOT NULL,location TEXT NOT NULL DEFAULT '',project TEXT NOT NULL DEFAULT '',budget TEXT NOT NULL DEFAULT '',timeline TEXT NOT NULL DEFAULT '',details TEXT NOT NULL DEFAULT '',source TEXT NOT NULL DEFAULT 'website',status TEXT NOT NULL DEFAULT 'new')");await db().execute("CREATE INDEX IF NOT EXISTS idx_leads_created ON leads(created_at)");})();return ready;}
