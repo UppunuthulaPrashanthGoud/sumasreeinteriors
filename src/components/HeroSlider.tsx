@@ -57,6 +57,5 @@ export default function HeroSlider(){
       </div>
       <div className="hero-location">HANAMAKONDA, WARANGAL <span>—</span> TELANGANA & ANDHRA PRADESH</div>
     </div>
-    <div className="hero-index">DESIGN <i/> BUILD <i/> FINISH</div>
   </section>;
 }
