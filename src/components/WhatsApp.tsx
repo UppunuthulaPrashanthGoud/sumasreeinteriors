@@ -1,0 +1,2 @@
+import {site} from "@/lib/site";
+export default function WhatsApp(){if(!site.whatsapp)return null;return <a className="whatsapp-float" href={`https://wa.me/${site.whatsapp}?text=${encodeURIComponent("Hello Suma Sri, I would like to discuss a project.")}`} target="_blank" rel="noreferrer" aria-label="Chat with Suma Sri on WhatsApp">WhatsApp <span>↗</span></a>}
