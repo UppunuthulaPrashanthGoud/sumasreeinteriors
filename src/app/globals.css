@@ -55,3 +55,11 @@ body{-webkit-font-smoothing:antialiased;letter-spacing:.005em}html{scroll-paddin
 @media(max-width:850px){.nav{box-shadow:0 20px 30px rgba(35,39,31,.08)}.section-pad{padding-top:80px;padding-bottom:80px}}
 @media(max-width:600px){.brand-main-logo{width:210px;max-height:54px}.hero h1{font-size:clamp(46px,12vw,58px)}.hero-shade{background:linear-gradient(90deg,rgba(19,25,19,.78),rgba(25,30,24,.38)),linear-gradient(0deg,rgba(18,23,18,.35),transparent 50%)}.hero-location{letter-spacing:.12em}.section-pad{padding-top:72px;padding-bottom:72px}.service-grid{gap:34px}.service-image,.project-image,.project-2 .project-image,.portfolio-image{height:285px}.feature-copy{padding:58px 24px}}
 @media(prefers-reduced-motion:reduce){.reveal-on-scroll{opacity:1;transform:none;transition:none}.hero-content,.hero-image{animation:none!important}.service-image img,.project-image img,.portfolio-image img,.about-image img,.service-row-image img{transition:none}}
+
+/* Brand system: use the approved master artwork everywhere */
+.brand-logo-only{gap:0!important}.brand-main-logo{display:block;width:clamp(248px,27vw,338px);height:auto;max-height:none;object-fit:contain;object-position:left center}
+.footer-brand{display:inline-flex;align-items:center;max-width:100%;margin:0 0 8px}.footer-brand img{display:block;width:min(100%,350px);height:auto;object-fit:contain;object-position:left center}
+.footer-brand:hover img{opacity:.92}
+.intro-stamp{gap:2px}.intro-stamp img{width:72px;height:72px;object-fit:contain;display:block}.intro-stamp small{font-size:7px;letter-spacing:.18em}
+.login-monogram img{display:block;width:104px;height:104px;object-fit:contain}.admin-brand img{width:48px;height:48px;object-fit:contain;display:block;flex:0 0 auto}
+@media(max-width:760px){.brand-main-logo{width:clamp(218px,62vw,270px);max-height:none}.footer-brand img{width:min(100%,310px)}}
