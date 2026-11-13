@@ -1069,3 +1069,19 @@ a,button{ -webkit-tap-highlight-color:transparent}
  color:#25D366!important;box-shadow:0 4px 14px rgba(0,0,0,.18)!important;
 }
 @media(max-width:600px){.whatsapp-float{right:16px!important;bottom:16px!important;width:52px!important;height:52px!important;min-width:52px!important;min-height:52px!important}.whatsapp-float .whatsapp-brand-icon{width:52px!important;height:52px!important;max-width:52px!important;max-height:52px!important}}
+
+
+/* Photo-led individual page mastheads */
+.page-hero{
+ background-size:cover!important;background-position:center 52%!important;
+ min-height:clamp(330px,36vw,470px);display:flex;align-items:center;
+ border-bottom:1px solid #e9e1d7;
+}
+.page-hero:after{display:none}
+.page-hero .wrap{width:min(1320px,calc(100% - 9vw));padding-top:12px;padding-bottom:12px}
+.page-hero h1{max-width:760px;text-shadow:0 1px 0 rgba(255,255,255,.25)}
+.page-hero p{max-width:540px}
+@media(max-width:650px){
+ .page-hero{min-height:320px;background-position:58% center!important}
+ .page-hero .wrap{width:calc(100% - 40px)}
+}
