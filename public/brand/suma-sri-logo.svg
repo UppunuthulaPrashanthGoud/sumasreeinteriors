@@ -1,1 +1,16 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 190" role="img" aria-labelledby="title desc"><title id="title">Suma Sri Interiors and Constructions</title><desc id="desc">An original architectural S monogram with timber slats and a roofline, paired with a refined serif wordmark.</desc><g transform="translate(12 12)"><path d="M12 72 88 15l76 57" fill="none" stroke="#b38a57" stroke-width="6" stroke-linecap="square"/><path d="M78 63c-18-12-39-3-39 15 0 14 12 20 31 26 22 7 34 14 34 30 0 20-20 32-42 30-16-1-29-8-37-19" fill="none" stroke="#343b30" stroke-width="11" stroke-linecap="square"/><path d="M77 65v75M91 59v88M105 57v80" stroke="#b38a57" stroke-width="4"/><path d="M133 72h26" stroke="#343b30" stroke-width="4"/></g><text x="205" y="91" fill="#343b30" font-family="Georgia,serif" font-size="64" letter-spacing="-2">Suma Sri</text><path d="M207 108 Q430 127 650 108" fill="none" stroke="#b38a57" stroke-width="2.5"/><text x="209" y="147" fill="#555b49" font-family="Arial,sans-serif" font-size="19" letter-spacing="8">INTERIORS &amp; CONSTRUCTIONS</text><text x="210" y="172" fill="#8a8174" font-family="Arial,sans-serif" font-size="10" letter-spacing="3.5">DESIGN • BUILD • TRANSFORM</text></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1040 270" role="img" aria-labelledby="title desc">
+<title id="title">Suma Sri Interiors and Constructions</title><desc id="desc">A refined architectural monogram and wordmark in olive green and warm gold.</desc>
+<g transform="translate(20 14)">
+<path d="M18 103 160 8l142 95" fill="none" stroke="#b88b50" stroke-width="11" stroke-linecap="square" stroke-linejoin="miter"/>
+<path d="M160 34v27m-14-13h28" fill="none" stroke="#b88b50" stroke-width="7"/>
+<path d="M73 115v106m21-120v134m21-148v148m21-134v134" stroke="#b88b50" stroke-width="7" opacity=".85"/>
+<path d="M254 113c-28-23-76-24-104-3-23 17-25 46-5 64 15 14 41 22 70 31 39 12 60 28 60 54 0 32-34 51-75 51-34 0-66-13-88-36" fill="none" stroke="#343b30" stroke-width="20" stroke-linecap="square" stroke-linejoin="round"/>
+<path d="M253 113c-11-9-25-15-40-18" fill="none" stroke="#d4b17c" stroke-width="5"/>
+</g>
+<text x="375" y="130" fill="#343b30" font-family="Georgia, 'Times New Roman', serif" font-size="112" letter-spacing="-3">Suma Sri</text>
+<path d="M380 158c170 17 414 17 620 0" fill="none" stroke="#b88b50" stroke-width="4"/>
+<text x="385" y="211" fill="#4f5b48" font-family="Arial, Helvetica, sans-serif" font-size="37" font-weight="600" letter-spacing="12">INTERIORS</text>
+<path d="M700 198h48" stroke="#b88b50" stroke-width="4"/>
+<text x="772" y="211" fill="#4f5b48" font-family="Arial, Helvetica, sans-serif" font-size="31" font-weight="600" letter-spacing="5">CONSTRUCTIONS</text>
+<text x="388" y="249" fill="#827c70" font-family="Arial, Helvetica, sans-serif" font-size="16" letter-spacing="5">DESIGN  •  BUILD  •  TRANSFORM</text>
+</svg>
