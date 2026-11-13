@@ -1050,3 +1050,22 @@ a,button{ -webkit-tap-highlight-color:transparent}
 }
 @keyframes pageRise{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:translateY(0)}}
 @media(prefers-reduced-motion:reduce){.page-hero .wrap,.about-copy,.contact-info,.contact-form-wrap,.values-grid article,.service-row-copy,.portfolio-card,.faq-item{animation:none!important}}
+
+
+/* Floating WhatsApp: original green brand mark, compact icon-only button */
+.whatsapp-float{
+ position:fixed!important;z-index:90!important;right:24px!important;bottom:24px!important;
+ width:58px!important;height:58px!important;min-width:58px!important;min-height:58px!important;
+ padding:0!important;margin:0!important;border:0!important;border-radius:50%!important;
+ background:transparent!important;color:#fff!important;box-shadow:none!important;
+ display:grid!important;place-items:center!important;line-height:0!important;
+ font-size:0!important;overflow:visible!important;text-decoration:none!important;
+}
+.whatsapp-float:hover{background:transparent!important;box-shadow:none!important;transform:translateY(-2px)!important}
+.whatsapp-float span{display:none!important}
+.whatsapp-float .whatsapp-brand-icon{
+ display:block!important;width:58px!important;height:58px!important;max-width:58px!important;max-height:58px!important;
+ flex:none!important;background:transparent!important;border:0!important;border-radius:50%!important;
+ color:#25D366!important;box-shadow:0 4px 14px rgba(0,0,0,.18)!important;
+}
+@media(max-width:600px){.whatsapp-float{right:16px!important;bottom:16px!important;width:52px!important;height:52px!important;min-width:52px!important;min-height:52px!important}.whatsapp-float .whatsapp-brand-icon{width:52px!important;height:52px!important;max-width:52px!important;max-height:52px!important}}
