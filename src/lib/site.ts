@@ -3,7 +3,7 @@ export const site = {
  url:process.env.NEXT_PUBLIC_SITE_URL || "https://sumasriinteriors.vercel.app",
  description:"Interior design, modular kitchens, home construction and renovation in Hanamakonda, Warangal. Serving Telangana and Andhra Pradesh.",
  address:"Hanamakonda, Warangal, Telangana - 506001", region:"Telangana & Andhra Pradesh",
- whatsapp:process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || ""
+ whatsapp:process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || "919133509293"
 };
 export const services = [
  {number:"01",title:"Interior Design",slug:"interior-design",text:"Thoughtful interiors shaped around your lifestyle, taste and everyday rituals.",image:"photo-1600210492486-724fe5c67fb0",details:"Plan and style rooms with considered layouts, finishes, lighting, storage and furniture details."},
