@@ -37,6 +37,6 @@ export default function Home(){
   <section className="gallery-process wrap"><div className="gallery-process-heading"><span className="eyebrow">FROM IDEA TO REALITY</span><h2>Good work starts<br/>with a clear plan.</h2></div>
    <div className="gallery-process-steps"><article><span>01</span><h3>Tell us about your space</h3><p>Share your ideas, requirements and what you have in mind.</p></article><article><span>02</span><h3>Plan it together</h3><p>We align the scope, layout, materials and estimate.</p></article><article><span>03</span><h3>Bring it to life</h3><p>Our team takes the agreed plan into execution.</p></article></div>
   </section>
-  <section className="gallery-cta"><div className="wrap gallery-cta-inner"><div><span className="eyebrow">LET'S MAKE IT PERSONAL</span><h2>Have a space in mind?<br/><em>Let's start there.</em></h2><p>Tell us what you’re planning. We’ll help you find a clear next step.</p></div><Link className="button button-dark" href="/contact">Book a consultation ↗</Link></div></section>
+  <section className="gallery-cta"><div className="wrap gallery-cta-inner"><div><span className="eyebrow">LET&apos;S MAKE IT PERSONAL</span><h2>Have a space in mind?<br/><em>Let&apos;s start there.</em></h2><p>Tell us what you’re planning. We’ll help you find a clear next step.</p></div><Link className="button button-dark" href="/contact">Book a consultation ↗</Link></div></section>
  </main>;
 }
