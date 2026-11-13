@@ -257,3 +257,66 @@ body:has(.admin-shell),body:has(.admin-login){background:#fff}
 .login-card input:focus{outline-color:#96774f}
 .back-site{color:#555}
 .admin-avatar{background:#ededed;color:#222}
+
+/* Cinematic rotating hero gallery */
+.hero-animated{isolation:isolate;position:relative;overflow:hidden}
+.hero-animated .hero-stage{position:absolute;inset:0 0 0 49%;overflow:hidden;background:#eeeeec;z-index:0}
+.hero-animated .hero-stage:before{content:"";position:absolute;inset:0;z-index:3;pointer-events:none;background:linear-gradient(90deg,#fff 0%,rgba(255,255,255,.58) 8%,rgba(255,255,255,0) 30%),linear-gradient(0deg,rgba(0,0,0,.28),transparent 34%)}
+.hero-slide{position:absolute;inset:0;opacity:0;visibility:hidden;transition:opacity 1.15s ease,visibility 1.15s}
+.hero-slide.is-active{opacity:1;visibility:visible;z-index:1}
+.hero-slide-image{object-fit:cover;object-position:center center;transform:scale(1.1) translateX(1.2%);transition:transform 7.2s cubic-bezier(.2,.65,.25,1)}
+.hero-slide.is-active .hero-slide-image{transform:scale(1) translateX(-.5%)}
+.hero-slide-caption{position:absolute;left:42px;bottom:100px;z-index:4;display:flex;flex-direction:column;gap:8px;color:#fff;text-shadow:0 2px 16px rgba(0,0,0,.28)}
+.hero-slide-caption span{font:700 8px/1.4 Arial,sans-serif;letter-spacing:.2em;color:rgba(255,255,255,.84)}
+.hero-slide-caption strong{font:400 28px/1.15 Georgia,serif;letter-spacing:-.02em}
+.hero-slider-controls{position:absolute;z-index:5;left:42px;right:34px;bottom:25px;color:#fff}
+.hero-progress-track{height:2px;background:rgba(255,255,255,.38);overflow:hidden;margin-bottom:13px}
+.hero-progress{display:block;width:0;height:100%;background:#fff;animation:hero-slide-progress 6.2s linear forwards}
+.hero-progress.is-paused{animation-play-state:paused}
+@keyframes hero-slide-progress{to{width:100%}}
+.hero-control-row{display:flex;align-items:center;gap:8px}
+.hero-count{margin-right:auto;display:flex;align-items:center;gap:8px;color:rgba(255,255,255,.72);font:10px Arial,sans-serif;letter-spacing:.12em}
+.hero-count b{font-weight:700;color:#fff}
+.hero-count i{font-style:normal;color:rgba(255,255,255,.45)}
+.hero-dots{display:flex;align-items:center;gap:3px;margin-right:8px}
+.hero-dot{width:22px;height:28px;padding:0;border:0;background:none;display:grid;place-items:center;cursor:pointer}
+.hero-dot span{width:5px;height:5px;border-radius:50%;background:rgba(255,255,255,.55);transition:width .25s,border-radius .25s,background .25s}
+.hero-dot.is-active span{width:17px;border-radius:8px;background:#fff}
+.hero-nav-button,.hero-pause-button{width:30px;height:30px;padding:0;border:1px solid rgba(255,255,255,.55);background:rgba(0,0,0,.08);color:#fff;font-size:15px;display:grid;place-items:center;cursor:pointer;transition:background .2s,border-color .2s}
+.hero-pause-button{font-size:10px}
+.hero-nav-button:hover,.hero-pause-button:hover{background:rgba(255,255,255,.22);border-color:#fff}
+.hero-animated .hero-content{position:relative;z-index:4;max-width:1240px;width:min(1240px,calc(100% - 72px))}
+.hero-animated .hero h1{max-width:640px}
+.hero-animated .hero-content>p{max-width:430px}
+.hero-animated .hero-location{z-index:4}
+.hero-animated .hero-index{z-index:4}
+.hero-dot:focus-visible,.hero-nav-button:focus-visible,.hero-pause-button:focus-visible{outline:2px solid #fff;outline-offset:3px}
+@media(max-width:850px){
+ .hero-animated .hero-stage{left:48%}
+ .hero-slide-caption{left:26px;bottom:96px}
+ .hero-slider-controls{left:26px;right:22px;bottom:20px}
+ .hero-animated .hero-content{width:min(100% - 44px,700px)}
+ .hero-animated .hero-content>p{max-width:360px}
+}
+@media(max-width:600px){
+ .hero-animated{height:760px;min-height:0}
+ .hero-animated .hero-stage{left:0;right:0;top:auto;bottom:0;width:100%;height:300px}
+ .hero-animated .hero-stage:before{background:linear-gradient(180deg,#fff 0%,rgba(255,255,255,.04) 20%,transparent 43%),linear-gradient(0deg,rgba(0,0,0,.34),transparent 45%)}
+ .hero-animated .hero-content{padding-top:61px;padding-bottom:0;width:calc(100% - 38px)}
+ .hero-animated .hero h1{font-size:46px;line-height:1.06;max-width:100%;margin:18px 0}
+ .hero-animated .hero-content>p{max-width:340px;font-size:13px}
+ .hero-animated .hero-actions{gap:14px}
+ .hero-animated .hero-location,.hero-animated .hero-index{display:none}
+ .hero-slide-caption{left:20px;bottom:91px;gap:5px}
+ .hero-slide-caption span{font-size:7px}
+ .hero-slide-caption strong{font-size:23px}
+ .hero-slider-controls{left:19px;right:19px;bottom:13px}
+ .hero-dot{width:18px}
+ .hero-nav-button,.hero-pause-button{width:28px;height:28px}
+ .hero-dots{gap:0;margin-right:3px}
+}
+@media(prefers-reduced-motion:reduce){
+ .hero-slide,.hero-slide-image{transition:none!important}
+ .hero-slide-image{transform:none!important}
+ .hero-progress{animation:none!important;width:100%}
+}

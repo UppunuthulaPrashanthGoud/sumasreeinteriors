@@ -2,24 +2,11 @@ import Image from "next/image";
 import Link from "next/link";
 import {imageUrl,projects,services} from "@/lib/site";
 import SectionTitle from "@/components/SectionTitle";
+import HeroSlider from "@/components/HeroSlider";
 
 export default function Home(){
   return <>
-    <section className="hero hero-home">
-      <Image className="hero-image" src={imageUrl("photo-1600607687939-ce8a6c25118c",2200)} alt="A calm contemporary living space with natural finishes" fill priority sizes="(max-width: 700px) 100vw, 52vw"/>
-      <div className="hero-shade"/>
-      <div className="wrap hero-content">
-        <span className="eyebrow eyebrow-light">SUMA SRI INTERIORS & CONSTRUCTIONS · WARANGAL</span>
-        <h1>Beautiful spaces.<br/><em>Thoughtfully built.</em></h1>
-        <p>Interior design, kitchens, construction and renovation—planned around the way you want to live.</p>
-        <div className="hero-actions">
-          <Link className="button button-dark" href="/contact">Discuss your project ↗</Link>
-          <Link className="text-link light-link" href="/projects">Explore selected work →</Link>
-        </div>
-        <div className="hero-location">HANAMAKONDA, WARANGAL <span>—</span> TELANGANA & ANDHRA PRADESH</div>
-      </div>
-      <div className="hero-index">DESIGN <i/> BUILD <i/> FINISH</div>
-    </section>
+    <HeroSlider/>
 
     <section className="intro-section wrap section-pad">
       <div className="intro-aside">
