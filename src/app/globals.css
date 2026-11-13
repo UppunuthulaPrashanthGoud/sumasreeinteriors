@@ -63,3 +63,109 @@ body{-webkit-font-smoothing:antialiased;letter-spacing:.005em}html{scroll-paddin
 .intro-stamp{gap:2px}.intro-stamp img{width:72px;height:72px;object-fit:contain;display:block}.intro-stamp small{font-size:7px;letter-spacing:.18em}
 .login-monogram img{display:block;width:104px;height:104px;object-fit:contain}.admin-brand img{width:48px;height:48px;object-fit:contain;display:block;flex:0 0 auto}
 @media(max-width:760px){.brand-main-logo{width:clamp(218px,62vw,270px);max-height:none}.footer-brand img{width:min(100%,310px)}}
+
+
+/* Suma Sri — Earth & Timber theme (approved palette) */
+:root{
+ --paper:#f3e8da;
+ --white:#fbf7f1;
+ --ink:#30241f;
+ --muted:#78685e;
+ --olive:#79523f;
+ --olive-dark:#49352d;
+ --bronze:#c18c66;
+ --line:#dfcdbb;
+ --sandstone:#ede0d0;
+ --walnut:#49352d;
+ --copper:#c18c66;
+}
+body{background:var(--paper);color:var(--ink)}
+::selection{background:#c18c66;color:#30241f}
+:focus-visible{outline-color:#a96e4c}
+.site-header{background:rgba(243,232,218,.94);border-bottom-color:rgba(73,53,45,.12);box-shadow:0 8px 30px rgba(73,53,45,.055)}
+.nav>a:not(.nav-cta){color:#59463b}
+.nav>a:not(.nav-cta)::after{background:var(--copper)}
+.nav .nav-cta{border-color:#79523f;color:#49352d}
+.nav .nav-cta:hover{background:#49352d;color:#fbf7f1}
+.hero{background:#49352d}
+.hero-shade{background:linear-gradient(90deg,rgba(40,27,22,.82),rgba(55,37,29,.5) 53%,rgba(55,37,29,.12)),linear-gradient(0deg,rgba(40,27,22,.35),transparent 44%)}
+.hero h1 em,.page-hero h1 em,.cta-inner h2 em,.feature-copy h2 em{color:#e0b995}
+.eyebrow,.project-meta>div>span,.portfolio-caption>div>span,.contact-detail small,.values-grid article>b{color:#a96e4c}
+.eyebrow-light,.hero .eyebrow:before{color:#e0b995}
+.button-light{background:#f3e8da;color:#49352d}
+.button-dark,.admin-primary{background:#49352d;color:#fbf7f1}
+.button-dark:hover,.admin-primary:hover{background:#654737}
+.text-link:hover{color:#a96e4c}
+.intro-copy h2 em,.about-copy h2 em,.contact-info h2 em{color:#79523f}
+.intro-stamp{color:#79523f;border-color:#c18c66}
+.intro-stamp:before{border-color:#dfcdbb}
+.services-section,.values-section{background:linear-gradient(135deg,#ede0d0,#e6d4c2)}
+.section-title p,.intro-copy p,.about-copy p,.contact-info>p,.service-info p,.portfolio-caption p,.page-hero p{color:#78685e}
+.service-image,.project-image,.portfolio-image,.about-image,.service-row-image{background:#d8c2ad}
+.service-number{background:rgba(73,53,45,.7)}
+.circle-arrow{color:#79523f;border-color:#cfb69f}
+.service-card:hover .circle-arrow,.project-card:hover .circle-arrow{background:#49352d;border-color:#49352d;color:#fbf7f1}
+.feature-band,.cta-section{background:radial-gradient(ellipse at 78% 12%,#684b3b,#49352d 58%);color:#fbf7f1}
+.feature-copy p,.cta-inner p{color:#e3d2c4}
+.page-hero{background:linear-gradient(120deg,#ede0d0,#f3e8da)}
+.page-hero:after{border-color:#c9a487;box-shadow:0 0 0 24px rgba(193,140,102,.08),0 0 0 50px rgba(193,140,102,.045)}
+.values-grid article{border-color:#d3bba5}
+.contact-form-wrap{background:#ede0d0;border-color:rgba(193,140,102,.28)}
+.contact-form input,.contact-form select,.contact-form textarea{background:#fbf7f1;border-color:#d9c6b3;color:#30241f}
+.contact-form input:focus,.contact-form select:focus,.contact-form textarea:focus{border-color:#c18c66;box-shadow:0 0 0 3px rgba(193,140,102,.16)}
+.form-message{background:#e8d8c8;color:#49352d}
+.footer{background:linear-gradient(135deg,#30221d,#49352d);color:#f6ede4}
+.footer-grid h4{color:#d7a47e}
+.footer-grid a:not(.brand),.footer-grid p{color:#ddcbbd}
+.footer-grid a:hover{color:#f0c7a6}
+.footer-bottom{border-color:#6b5042;color:#c5ad9c}
+.whatsapp-float{background:#79523f;color:#fff8f1;box-shadow:0 10px 32px rgba(73,53,45,.25)}
+.whatsapp-float:hover{background:#604231}
+.portfolio-note{border-color:#d8c4b1}
+.contact-detail{border-color:#dfcdbb}
+.contact-detail p{color:#78685e}
+.faq-item{border-color:#dfcdbb}
+.faq-item p{color:#78685e}
+/* Keep the admin workspace visually aligned with the public brand */
+body:has(.admin-shell),body:has(.admin-login){background:#f3e8da}
+.admin-shell{--ad-ink:#30241f;--ad-muted:#806d61;--ad-line:#e4d3c2;--ad-olive:#79523f;color:var(--ad-ink)}
+.admin-sidebar{background:#49352d;color:#fbf7f1}
+.admin-brand>span{border-color:#c18c66;color:#e8c3a4}
+.side-link{color:#e3d2c4}
+.side-link.active{background:#684b3b;color:#fff8f1}
+.side-link i{background:#8c634a}
+.admin-main{color:#30241f}
+.admin-topbar{border-color:#e4d3c2}
+.admin-topbar .admin-kicker,.admin-kicker{color:#a17c62}
+.admin-ghost,.stats-grid article,.leads-panel,.search-box,.table-tools select,.status-edit select,.lead-drawer{background:#fbf7f1;border-color:#e4d3c2;color:#49352d}
+.admin-welcome h2 em{color:#a96e4c}
+.stats-grid article span,.stats-grid article small{color:#806d61}
+.leads-table th{background:#ede0d0;color:#806d61}
+.leads-table td{border-color:#f0e5da;color:#665348}
+.leads-table tbody tr:hover{background:#f8efe6}
+.leads-table td:first-child b{color:#49352d}
+.status-new{background:#f1e2d4;color:#865a3e}
+.status-contacted{background:#e8e1d8;color:#715d4d}
+.status-quoted{background:#f5e7d7;color:#9b7049}
+.status-won{background:#e8eadf;color:#596747}
+.status-lost{background:#f2e5e1;color:#98665b}
+.search-box{background:#fffaf4}
+.search-box input{background:transparent;color:#49352d}
+.table-footer,.admin-footer{border-color:#e4d3c2;color:#806d61}
+.admin-login{background:#f3e8da}
+.login-art{background:radial-gradient(circle at 80% 20%,#684b3b,#49352d 60%);color:#fbf7f1}
+.login-art:after{border-color:#ffffff20;box-shadow:0 0 0 45px #ffffff0a,0 0 0 90px #ffffff07}
+.login-monogram{border-color:#c18c66;color:#e8c3a4}
+.login-art>span,.login-art>small{color:#e0b995}
+.login-art h1 em{color:#e0b995}
+.login-art p{color:#e3d2c4}
+.login-card{background:#fbf7f1;border-color:#e4d3c2}
+.login-card .admin-brand{color:#49352d}
+.login-card .admin-kicker{color:#a17c62}
+.login-card label{color:#665348}
+.login-card input{background:#fffaf4;border-color:#dfcdbb;color:#30241f}
+.login-card input:focus{outline-color:#c18c66}
+.back-site{color:#79523f}
+.admin-avatar{background:#c18c66;color:#49352d}
+@media(max-width:850px){.nav{background:#f3e8da;border-color:#dfcdbb;box-shadow:0 20px 30px rgba(73,53,45,.1)}}
+@media(prefers-reduced-motion:reduce){.hero-image{animation:none}}
