@@ -5,7 +5,7 @@ import SectionTitle from "@/components/SectionTitle";
 import HeroSlider from "@/components/HeroSlider";
 
 export default function Home(){
-  return <>
+  return <main className="home-redesign">
     <HeroSlider/>
 
     <section className="intro-section wrap section-pad">
@@ -23,7 +23,7 @@ export default function Home(){
 
     <section className="services-section section-pad">
       <div className="wrap">
-        <SectionTitle eyebrow="WHAT WE DO" title="One place to shape your space." text="A considered range of design and build services, brought together around your project."/>
+        <SectionTitle eyebrow="WHAT WE DO" title="One place to shape your space." text="From the first layout to the final finish, bring every part of your space together with one team."/>
         <div className="service-grid">
           {services.slice(0,4).map(s=><Link href={`/${s.slug}`} className="service-card" key={s.slug}>
             <div className="service-image"><Image src={imageUrl(s.image,1000)} alt={s.title} fill sizes="(max-width:700px) 100vw,50vw"/><span className="service-number">{s.number}</span></div>
@@ -57,7 +57,7 @@ export default function Home(){
     </section>
 
     <section className="projects-section section-pad wrap">
-      <SectionTitle eyebrow="SELECTED WORK" title="Ideas made for everyday living." text="Explore a featured Hanamakonda home and additional illustrative design references."/>
+      <SectionTitle eyebrow="SELECTED WORK" title="Ideas made for everyday living." text="A look at the spaces, details and design directions that shape the Suma Sri approach."/>
       <div className="project-grid">
         {projects.map((p,i)=><Link href="/projects" className={`project-card project-${i+1}`} key={p.title}>
           <div className="project-image"><Image src={imageUrl(p.image,1400)} alt={p.title} fill sizes="(max-width:700px) 100vw,50vw"/></div>
@@ -76,5 +76,5 @@ export default function Home(){
         <Link className="button button-dark" href="/contact">Start a conversation ↗</Link>
       </div>
     </section>
-  </>;
+  </main>;
 }

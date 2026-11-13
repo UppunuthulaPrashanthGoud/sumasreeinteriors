@@ -25,7 +25,7 @@ export default function HeroSlider(){
   const previous=()=>setActiveIndex(current=>(current-1+slides.length)%slides.length);
   const next=()=>setActiveIndex(current=>(current+1)%slides.length);
 
-  return <section className="hero hero-home hero-animated" aria-label="Suma Sri Interiors">
+  return <section className="hero hero-home hero-animated home-hero" aria-label="Suma Sri Interiors">
     <div className="hero-stage">
       {slides.map((slide,index)=><div className={`hero-slide ${activeIndex===index?"is-active":""}`} key={slide.image} aria-hidden={activeIndex!==index}>
         <Image className="hero-slide-image" src={imageUrl(slide.image,2200)} alt={activeIndex===index?slide.alt:""} fill priority={index===0} sizes="(max-width: 700px) 100vw, 52vw"/>

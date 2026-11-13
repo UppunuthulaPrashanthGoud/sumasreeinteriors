@@ -320,3 +320,130 @@ body:has(.admin-shell),body:has(.admin-login){background:#fff}
  .hero-slide-image{transform:none!important}
  .hero-progress{animation:none!important;width:100%}
 }
+
+/* Homepage art direction — refined white editorial layout */
+.home-redesign{background:#fff;color:#181818;overflow:hidden}
+.home-redesign .section-pad{padding-top:clamp(66px,8vw,112px);padding-bottom:clamp(66px,8vw,112px)}
+.home-redesign .section-title{margin-bottom:34px}
+.home-redesign .section-title h2{max-width:600px;font-size:clamp(36px,4.4vw,58px);line-height:1.04}
+.home-redesign .section-title p{max-width:490px}
+.home-redesign .intro-section{padding-top:82px;padding-bottom:92px;align-items:start}
+.home-redesign .intro-copy{max-width:660px}
+.home-redesign .intro-copy h2{font-size:clamp(38px,4.3vw,58px);line-height:1.04}
+.home-redesign .intro-copy p{max-width:600px}
+.home-redesign .services-section{padding-top:72px;padding-bottom:88px}
+.home-redesign .service-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:36px 26px}
+.home-redesign .service-image{height:clamp(210px,27vw,360px);overflow:hidden}
+.home-redesign .service-info{min-height:74px}
+.home-redesign .service-info h3{font-size:clamp(18px,2vw,24px)}
+.home-redesign .feature-band{padding-top:20px;padding-bottom:20px;gap:0}
+.home-redesign .feature-photo{min-height:clamp(300px,38vw,490px)}
+.home-redesign .feature-copy{max-width:600px}
+.home-redesign .feature-copy h2{line-height:1.02}
+.home-redesign .process-section{padding-top:82px;padding-bottom:82px}
+.home-redesign .process-grid{gap:32px}
+.home-redesign .process-grid article{padding-top:20px}
+.home-redesign .projects-section{padding-top:96px;padding-bottom:100px}
+.home-redesign .project-grid{grid-template-columns:1fr 1fr;align-items:start;gap:38px 24px}
+.home-redesign .project-2{margin-top:54px}
+.home-redesign .project-image,.home-redesign .project-2 .project-image{height:clamp(220px,29vw,390px)}
+.home-redesign .project-meta h3{font-size:clamp(18px,2vw,23px)}
+.home-redesign .cta-section{padding:86px 0 92px;position:relative;overflow:hidden}
+.home-redesign .cta-section:after{content:"";position:absolute;width:380px;height:380px;border:1px solid #f1ede7;border-radius:50%;right:-180px;top:-205px;pointer-events:none}
+.home-redesign .cta-inner{position:relative;z-index:1}
+.home-redesign .cta-inner h2{line-height:1.02}
+.home-hero{height:min(700px,calc(100svh - 86px));min-height:570px}
+.home-hero .hero-stage{left:50%;right:0}
+.home-hero .hero-stage:before{background:linear-gradient(90deg,#fff 0%,rgba(255,255,255,.18) 12%,transparent 35%),linear-gradient(0deg,rgba(0,0,0,.38),transparent 38%)}
+.home-hero .hero-content{width:min(1240px,calc(100% - 72px));padding-right:51%;padding-top:0}
+.home-hero .hero-content h1{font-size:clamp(48px,5.7vw,78px);max-width:610px}
+.home-hero .hero-content>p{max-width:420px;font-size:14px}
+.home-hero .hero-slide-caption{left:34px;bottom:95px}
+.home-hero .hero-slider-controls{left:34px;right:28px}
+.home-hero .hero-location{left:max(36px,calc((100vw - 1240px)/2))}
+@media(max-width:850px){
+ .home-redesign .intro-section{grid-template-columns:.7fr 2fr;gap:28px}
+ .home-hero{height:560px;min-height:520px}
+ .home-hero .hero-stage{left:50%}
+ .home-hero .hero-content{width:calc(100% - 44px);padding-right:50%}
+ .home-hero .hero-content h1{font-size:clamp(40px,6vw,58px)}
+ .home-redesign .feature-band{padding-left:22px;padding-right:22px}
+}
+@media(max-width:600px){
+ .home-hero{height:400px;min-height:400px}
+ .home-hero .hero-stage{left:50%;top:0;bottom:0;height:100%;width:50%}
+ .home-hero .hero-stage:before{background:linear-gradient(90deg,rgba(255,255,255,.12),transparent 26%),linear-gradient(0deg,rgba(0,0,0,.4),transparent 42%)}
+ .home-hero .hero-content{width:50%;height:100%;margin:0;padding:0 0 0 19px;display:flex;flex-direction:column;align-items:flex-start;justify-content:center}
+ .home-hero .hero-content>.eyebrow{font-size:6px;line-height:1.6;letter-spacing:.13em;max-width:170px}
+ .home-hero .hero-content h1{font-size:clamp(27px,7.5vw,37px);line-height:1.02;letter-spacing:-.05em;margin:13px 0 12px}
+ .home-hero .hero-content>p{font-size:9px;line-height:1.65;max-width:190px;margin:0 0 14px}
+ .home-hero .hero-actions{display:flex;flex-direction:column;align-items:flex-start;gap:9px}
+ .home-hero .hero-actions .button{padding:9px 10px;font-size:7px}
+ .home-hero .hero-actions .text-link{font-size:7px}
+ .home-hero .hero-location,.home-hero .hero-index{display:none}
+ .home-hero .hero-slide-caption{left:12px;bottom:68px;gap:4px}
+ .home-hero .hero-slide-caption span{font-size:5px;letter-spacing:.12em}
+ .home-hero .hero-slide-caption strong{font-size:14px;max-width:170px}
+ .home-hero .hero-slider-controls{left:12px;right:10px;bottom:10px}
+ .home-hero .hero-progress-track{margin-bottom:6px}
+ .home-hero .hero-control-row{gap:4px}
+ .home-hero .hero-count{font-size:7px;gap:4px}
+ .home-hero .hero-dot{width:14px;height:20px}
+ .home-hero .hero-dot span{width:4px;height:4px}
+ .home-hero .hero-dot.is-active span{width:10px}
+ .home-hero .hero-dots{margin-right:1px}
+ .home-hero .hero-nav-button,.home-hero .hero-pause-button{width:20px;height:20px;font-size:10px}
+ .home-redesign .section-pad{padding-top:58px;padding-bottom:58px}
+ .home-redesign .intro-section{display:grid;grid-template-columns:1fr;gap:15px;padding-top:58px;padding-bottom:60px}
+ .home-redesign .intro-aside{margin:0;height:auto}
+ .home-redesign .intro-copy h2{font-size:34px;max-width:370px}
+ .home-redesign .intro-copy p{font-size:11px;line-height:1.8}
+ .home-redesign .intro-stamp{display:none}
+ .home-redesign .section-title{margin-bottom:24px}
+ .home-redesign .section-title h2{font-size:34px}
+ .home-redesign .section-title p{font-size:10px}
+ .home-redesign .services-section{padding-top:60px;padding-bottom:62px}
+ .home-redesign .service-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:24px 12px}
+ .home-redesign .service-image{height:clamp(120px,38vw,185px)}
+ .home-redesign .service-number{top:7px;left:7px;padding:4px 5px;font-size:7px}
+ .home-redesign .service-info{padding-top:9px;padding-bottom:8px;min-height:60px}
+ .home-redesign .service-info h3{font-size:13px;line-height:1.2;margin-bottom:4px}
+ .home-redesign .service-info p{font-size:8px;line-height:1.5}
+ .home-redesign .circle-arrow{font-size:14px}
+ .home-redesign .center-link{margin-top:28px}
+ .home-redesign .center-link .button{font-size:8px;padding:10px 12px}
+ .home-redesign .feature-band{grid-template-columns:1fr 1fr;padding:0 19px;gap:16px;align-items:center}
+ .home-redesign .feature-photo{min-height:220px}
+ .home-redesign .feature-copy{padding:15px 0}
+ .home-redesign .feature-copy h2{font-size:29px;line-height:1.04}
+ .home-redesign .feature-copy p{font-size:9px;line-height:1.7}
+ .home-redesign .feature-copy .eyebrow{font-size:6px;letter-spacing:.12em}
+ .home-redesign .feature-copy .text-link{font-size:8px}
+ .home-redesign .process-section{padding-top:60px;padding-bottom:58px}
+ .home-redesign .process-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+ .home-redesign .process-grid article{padding:12px 7px 0 0}
+ .home-redesign .process-grid article>span{font-size:12px}
+ .home-redesign .process-grid h3{font-size:13px;line-height:1.2;margin:9px 0 5px}
+ .home-redesign .process-grid p{font-size:8px;line-height:1.55}
+ .home-redesign .process-link{margin-top:22px}
+ .home-redesign .process-link .text-link{font-size:8px}
+ .home-redesign .projects-section{padding-top:65px;padding-bottom:65px}
+ .home-redesign .project-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:24px 12px}
+ .home-redesign .project-2{margin-top:20px}
+ .home-redesign .project-image,.home-redesign .project-2 .project-image{height:clamp(125px,40vw,190px)}
+ .home-redesign .project-meta{padding-top:8px}
+ .home-redesign .project-meta>div>span{font-size:6px}
+ .home-redesign .project-meta h3{font-size:12px;line-height:1.25;margin:4px 0}
+ .home-redesign .project-meta small{font-size:7px}
+ .home-redesign .project-meta .circle-arrow{font-size:12px}
+ .home-redesign .project-disclaimer{font-size:7px;line-height:1.6;margin-top:24px}
+ .home-redesign .cta-section{padding:58px 0 62px}
+ .home-redesign .cta-inner h2{font-size:38px}
+ .home-redesign .cta-inner p{font-size:10px;line-height:1.7}
+ .home-redesign .cta-inner .button{font-size:9px;padding:12px 14px}
+}
+@media(max-width:380px){
+ .home-hero .hero-content h1{font-size:25px}
+ .home-redesign .feature-copy h2{font-size:25px}
+ .home-redesign .process-grid h3{font-size:11px}
+}
