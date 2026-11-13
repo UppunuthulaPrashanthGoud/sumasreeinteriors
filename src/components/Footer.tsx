@@ -2,7 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import {site} from "@/lib/site";
 export default function Footer(){return <footer className="chosen-footer"><div className="chosen-footer-main wrap">
- <div className="chosen-footer-brand"><Link href="/"><Image src="/brand/suma-sri-logo.png" alt="Suma Sri Interiors" width={900} height={210}/></Link><p>Spaces that inspire, built around you.</p></div>
+ <div className="chosen-footer-brand"><Link href="/"><Image src="/brand/suma-sri-logo.svg" alt="Suma Sri Interiors" width={900} height={210}/></Link><p>Spaces that inspire, built around you.</p></div>
  <div><h4>Quick Links</h4><Link href="/">Home</Link><Link href="/about">About Us</Link><Link href="/services">Services</Link><Link href="/projects">Projects</Link><Link href="/contact">Contact</Link></div>
  <div><h4>Our Services</h4><Link href="/interior-design">Interior Design</Link><Link href="/modular-kitchen">Modular Kitchens</Link><Link href="/house-renovation">Home Renovation</Link><Link href="/house-construction">Construction</Link><Link href="/services">Space Planning</Link></div>
  <div><h4>Get in Touch</h4><p>⌖ &nbsp;{site.address}</p><p>☎ &nbsp;<a href="https://wa.me/919133509293" target="_blank" rel="noreferrer">+91 91335 09293</a></p><p>✉ &nbsp;Contact us through WhatsApp for enquiries</p></div>
