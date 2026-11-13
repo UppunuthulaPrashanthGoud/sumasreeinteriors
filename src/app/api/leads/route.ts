@@ -1,0 +1,6 @@
+import {NextRequest,NextResponse} from "next/server";
+import {randomUUID} from "node:crypto";
+import {db,ensureDb} from "@/lib/db";
+export const runtime="nodejs";
+const str=(v:unknown,n=2000)=>typeof v==="string"?v.trim().slice(0,n):"";
+export async function POST(req:NextRequest){try{const b=await req.json(),name=str(b.name,120),phone=str(b.phone,30),location=str(b.location,160),project=str(b.project,100),budget=str(b.budget,80),timeline=str(b.timeline,80),details=str(b.details,3000);if(name.length<2||phone.replace(/\D/g,"").length<8||!location||!project)return NextResponse.json({error:"Please enter your name, valid phone number, location and project type."},{status:400});await ensureDb();const id=randomUUID(),created=new Date().toISOString();await db().execute({sql:"INSERT INTO leads (id,created_at,name,phone,location,project,budget,timeline,details,source,status) VALUES (?,?,?,?,?,?,?,?,?,?,?)",args:[id,created,name,phone,location,project,budget,timeline,details,str(b.source,80)||"website","new"]});return NextResponse.json({ok:true,id},{status:201});}catch(e){console.error("Lead insert failed",e);return NextResponse.json({error:"We couldn't save your enquiry. Please contact us on WhatsApp."},{status:500});}}
