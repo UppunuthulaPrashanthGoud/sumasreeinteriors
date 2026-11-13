@@ -20,7 +20,7 @@ export default function HeroSlider(){
     if(paused||window.matchMedia("(prefers-reduced-motion: reduce)").matches)return;
     const timer=window.setInterval(()=>setActiveIndex(current=>(current+1)%slides.length),6200);
     return ()=>window.clearInterval(timer);
-  },[paused]);
+  },[paused,activeIndex]);
 
   const previous=()=>setActiveIndex(current=>(current-1+slides.length)%slides.length);
   const next=()=>setActiveIndex(current=>(current+1)%slides.length);
