@@ -1,61 +1,34 @@
 "use client";
-
 import Image from "next/image";
 import Link from "next/link";
 import {useEffect,useState} from "react";
 import {imageUrl} from "@/lib/site";
-
 const slides=[
-  {image:"photo-1600210492486-724fe5c67fb0",alt:"Elegant contemporary living room with layered natural textures",eyebrow:"01 / LIVING SPACES",title:"Layered for living"},
-  {image:"photo-1600607687939-ce8a6c25118c",alt:"Modern interior with warm wood and clean architectural lines",eyebrow:"02 / INTERIOR DESIGN",title:"Made to feel like home"},
-  {image:"photo-1616486338812-3dadae4b4ace",alt:"Calm bedroom interior with carefully coordinated finishes",eyebrow:"03 / PRIVATE RETREATS",title:"A quieter kind of comfort"},
-  {image:"photo-1600585154340-be6161a56a0c",alt:"Contemporary home architecture surrounded by greenery",eyebrow:"04 / HOMES & CONSTRUCTION",title:"A beautiful first impression"}
+ {image:"photo-1600210492486-724fe5c67fb0",alt:"Warm contemporary living room with natural textures",eyebrow:"01 / LIVING SPACES",title:"A softer way to live",note:"Warmth in every detail"},
+ {image:"photo-1600607687939-ce8a6c25118c",alt:"Modern home interior with clean architectural lines",eyebrow:"02 / CONTEMPORARY HOMES",title:"Designed around you",note:"Spaces with a point of view"},
+ {image:"photo-1616486338812-3dadae4b4ace",alt:"Calm bedroom with elegant warm finishes",eyebrow:"03 / PRIVATE RETREATS",title:"Find your quiet",note:"A little more room to breathe"},
+ {image:"photo-1600585154340-be6161a56a0c",alt:"Modern residential architecture surrounded by greenery",eyebrow:"04 / ARCHITECTURE",title:"Made to make an impression",note:"Thoughtfully built, beautifully lived"}
 ];
-
 export default function HeroSlider(){
-  const [activeIndex,setActiveIndex]=useState(0);
-  const [paused,setPaused]=useState(false);
-
-  useEffect(()=>{
-    if(paused||window.matchMedia("(prefers-reduced-motion: reduce)").matches)return;
-    const timer=window.setInterval(()=>setActiveIndex(current=>(current+1)%slides.length),6200);
-    return ()=>window.clearInterval(timer);
-  },[paused,activeIndex]);
-
-  const previous=()=>setActiveIndex(current=>(current-1+slides.length)%slides.length);
-  const next=()=>setActiveIndex(current=>(current+1)%slides.length);
-
-  return <section className="hero hero-home hero-animated home-hero" aria-label="Suma Sri Interiors">
-    <div className="hero-stage">
-      {slides.map((slide,index)=><div className={`hero-slide ${activeIndex===index?"is-active":""}`} key={slide.image} aria-hidden={activeIndex!==index}>
-        <Image className="hero-slide-image" src={imageUrl(slide.image,2200)} alt={activeIndex===index?slide.alt:""} fill priority={index===0} sizes="(max-width: 700px) 100vw, 52vw"/>
-        <div className="hero-slide-caption">
-          <span>{slide.eyebrow}</span>
-          <strong>{slide.title}</strong>
-        </div>
-      </div>)}
-      <div className="hero-slider-controls" role="group" aria-label="Hero image controls">
-        <div className="hero-progress-track"><span key={activeIndex} className={`hero-progress ${paused?"is-paused":""}`}/></div>
-        <div className="hero-control-row">
-          <span className="hero-count"><b>{String(activeIndex+1).padStart(2,"0")}</b><i>/</i>{String(slides.length).padStart(2,"0")}</span>
-          <div className="hero-dots">
-            {slides.map((slide,index)=><button key={slide.image} type="button" className={activeIndex===index?"hero-dot is-active":"hero-dot"} aria-label={`Show image ${index+1}: ${slide.title}`} aria-pressed={activeIndex===index} onClick={()=>setActiveIndex(index)}><span/></button>)}
-          </div>
-          <button className="hero-nav-button" type="button" onClick={previous} aria-label="Previous image">←</button>
-          <button className="hero-nav-button" type="button" onClick={next} aria-label="Next image">→</button>
-          <button className="hero-pause-button" type="button" onClick={()=>setPaused(value=>!value)} aria-label={paused?"Play automatic image rotation":"Pause automatic image rotation"}>{paused?"▶":"Ⅱ"}</button>
-        </div>
-      </div>
-    </div>
-    <div className="wrap hero-content">
-      <span className="eyebrow">SUMA SRI INTERIORS & CONSTRUCTIONS · WARANGAL</span>
-      <h1>Beautiful spaces.<br/><em>Thoughtfully built.</em></h1>
-      <p>Interior design, kitchens, construction and renovation—planned around the way you want to live.</p>
-      <div className="hero-actions">
-        <Link className="button button-dark" href="/contact">Discuss your project ↗</Link>
-        <Link className="text-link light-link" href="/projects">Explore selected work →</Link>
-      </div>
-      <div className="hero-location">HANAMAKONDA, WARANGAL <span>—</span> TELANGANA & ANDHRA PRADESH</div>
-    </div>
-  </section>;
+ const [activeIndex,setActiveIndex]=useState(0);const [paused,setPaused]=useState(false);
+ useEffect(()=>{if(paused||window.matchMedia("(prefers-reduced-motion: reduce)").matches)return;const timer=window.setInterval(()=>setActiveIndex(current=>(current+1)%slides.length),6500);return()=>window.clearInterval(timer);},[paused]);
+ const select=(index:number)=>setActiveIndex((index+slides.length)%slides.length);
+ return <section className="gallery-hero" aria-label="Featured interiors">
+  <div className="gallery-hero-stage">{slides.map((slide,index)=><div className={`gallery-hero-slide ${activeIndex===index?"is-active":""}`} key={slide.image} aria-hidden={activeIndex!==index}>
+   <Image src={imageUrl(slide.image,2200)} alt={activeIndex===index?slide.alt:""} fill priority={index===0} sizes="100vw" className="gallery-hero-photo"/>
+  </div>)}<div className="gallery-hero-shade"/>
+   <div className="gallery-hero-caption"><span>{slides[activeIndex].eyebrow}</span><strong>{slides[activeIndex].note}</strong></div>
+   <div className="gallery-hero-controls"><div className="gallery-hero-progress"><span key={activeIndex} className={paused?"is-paused":""}/></div><div className="gallery-hero-control-row">
+    <span className="gallery-hero-count"><b>{String(activeIndex+1).padStart(2,"0")}</b> / 04</span>
+    <div className="gallery-hero-dots">{slides.map((slide,index)=><button type="button" key={slide.image} onClick={()=>select(index)} className={activeIndex===index?"is-active":""} aria-label={`Show slide ${index+1}: ${slide.title}`} aria-pressed={activeIndex===index}/>)}</div>
+    <button type="button" className="gallery-hero-nav" onClick={()=>select(activeIndex-1)} aria-label="Previous slide">←</button><button type="button" className="gallery-hero-nav" onClick={()=>select(activeIndex+1)} aria-label="Next slide">→</button><button type="button" className="gallery-hero-pause" onClick={()=>setPaused(value=>!value)} aria-label={paused?"Resume slide rotation":"Pause slide rotation"}>{paused?"▶":"Ⅱ"}</button>
+   </div></div>
+  </div>
+  <div className="gallery-hero-panel"><span className="eyebrow">INTERIORS&nbsp; / &nbsp;ARCHITECTURE&nbsp; / &nbsp;TURNKEY</span>
+   <h1>{slides[activeIndex].title.split(" ").slice(0,-1).join(" ")} <em>{slides[activeIndex].title.split(" ").slice(-1)}</em></h1>
+   <p>Interior design, kitchens, construction and renovation—thoughtfully planned around the way you want to live.</p>
+   <div className="gallery-hero-actions"><Link className="button button-dark" href="/contact">Start your project ↗</Link><Link className="text-link" href="/projects">Explore the gallery →</Link></div>
+   <span className="gallery-hero-location">SUMA SRI INTERIORS & CONSTRUCTIONS <i/> WARANGAL</span><span className="gallery-hero-side-index">01 — 04</span>
+  </div>
+ </section>;
 }
